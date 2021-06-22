@@ -2,7 +2,7 @@
 title: Use dlib in C++
 date: 2020-03-01 01:25:00
 tags:
-description: 同样是关于dlib库的安装。但由于dlib可以不用预编译，官网上也没有提供预编译的版本，本文主要是介绍如何在项目中直接使用dlib。
+description: 同样是关于dlib库的安装。但由于dlib可以不用预编译，官网上也没有提供预编译的版本，本文主要是介绍如何在项目中直接使用dlib。在结尾总结了配置3d_face_reconstruction的过程（国创项目中需要用到，虽然并没有安装成功）
 ---
 
 ## use dlib in c++
@@ -91,3 +91,43 @@ dlib的CMake脚本包含INSTALL target，因此可以像其它C++库一样将dli
 
 - 调用dlib时出现USER_ERROR __inconsistent_build_configuration__ see_dlib_faq_2错误。
   需要将build/dlib/config.h文件拷贝到源码目录dlib-19.17/dlib进行覆盖。config.h文件内有其说明。
+
+## 配置3d_face_reconstruction总结
+### 1. OpenCV
+
+1. windows下载预编译版(只含有msvc编译的版本)
+
+2. CMake直接使用find_packages即可。（需添加环境变量，以便找到OpenCV的config文件）
+
+### 2. dlib
+
+1. 官方推荐将代码直接包含到项目中编译（好处是没有ABI一致性问题）
+
+   CMake中add_subdirectory(/path/to/dlib/top/dir)即可。（甚至可以自动从网上下载）
+
+### 3. boost
+
+1. 分为只含有头文件的库和需要独立编译的库。
+2. 官方编译方法为：
+   1. 先build出Boost.Build（可以看作Boost的一个build工具）
+   2. 然后调用b2编译指定模块。（可以添加参数指定编译的库的路径）
+   3. 我的编译目录是stage/（库位于stage/lib/下）
+3. CMake find_packages暂时是失败的。
+
+### 4. eos
+
+1. 只需要包含头文件即可(header only)，include和3rdparty
+2. 顶层目录下的CMakeLists.txt默认勾选了编译example下的示例（需要boost的system, filesystem, program_options和openCV的core, higui, imgproc
+3. CMake直接add_subdirectory(/path/to/eos)比较方便。
+
+### 5. Qt
+
+1. 官方介绍了如何使用CMake find_packages，自动tic, moc等。
+
+
+
+### TODO
+
+1. 学习Qt，能自己写界面。
+2. 明白eos那个示例程序输入输出是什么
+3. 最后，自己来改写eos的程序，自己写Qt程序，最后展示出来。
