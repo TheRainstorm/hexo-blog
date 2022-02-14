@@ -1,8 +1,4 @@
-/*
-!.gitignore
-!_config.yml
-!package.json
-!package-lock.json
-!/scaffolds/
-!/source/
-!/themes/
+.deploy_git
+node_modules
+public
+db.json
