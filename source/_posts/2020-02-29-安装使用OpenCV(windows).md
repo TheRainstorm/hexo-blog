@@ -2,6 +2,7 @@
 title: 安装使用OpenCV(windows)
 date: 2020-02-29 12:00:00
 tags:
+- opencv
 description: 关于OpenCV的安装(预编译版，从源码安装)，使用(VisualStudio和CMake)。
 ---
 

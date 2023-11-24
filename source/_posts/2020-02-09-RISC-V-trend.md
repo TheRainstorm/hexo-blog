@@ -2,6 +2,7 @@
 title: RISC-V trend
 date: 2020-01-07 22:24:46
 tags:
+- risc-v
 description: 计算机组成原理的期末作业，在RISC-V精简指令集、异构计算等领域中选择一个并查阅相关资料写一篇报告。
 ---
 # RISC-V报告

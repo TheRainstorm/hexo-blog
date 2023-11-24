@@ -2,6 +2,7 @@
 title: 'Vacation routine: ASC2020 tips (up to 02/09)'
 date: 2020-02-09 22:39:14
 tags:
+- ASC
 ---
 
 记录了这么多天弄ASC2020学到的一些知识，原本记录在txt里:-)，因此有点丑。

@@ -1,7 +1,11 @@
 ---
 title: 使用docker配置hexo博客环境
 date: 2022-05-24 22:19:21
-tags: [linux, docker]
+tags:
+- docker
+- hexo
+categories:
+- 折腾
 ---
 
 由于nodejs版本较多，直接在宿主机上安装nodejs环境不容易管理。因此可以使用docker维护一个专门用于hexo的环境。
@@ -61,7 +65,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
 # 安装bash git openssh
 RUN apk add bash git openssh
 
-# 设置容器时区为上海，不然发布文章的时间是国际时间，也就是比我们晚8个小时
+# 设置容器时区为上海
 RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 && echo "Asia/Shanghai" > /etc/timezone \
 && apk del tzdata

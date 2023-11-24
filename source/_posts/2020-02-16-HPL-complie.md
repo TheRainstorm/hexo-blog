@@ -2,6 +2,7 @@
 title: HPL complie
 date: 2020-02-16 00:07:30
 tags:
+- hpl
 mathjax: true
 description: 关于编译BLAS/CBLAS，编译HPL以及HPL的优化。
 ---

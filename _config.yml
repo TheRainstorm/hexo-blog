@@ -97,7 +97,7 @@ ignore:
 # theme: landscape
 # theme: hexo-theme-lx
 theme: hexo-theme-next-v7.8.0
-
+# theme: hexo-theme-matery
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

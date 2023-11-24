@@ -1,7 +1,11 @@
 ---
 title: CloudView平台运行bad apple
 date: 2020-04-09 12:00
-tags: misc
+tags:
+- cloudview
+- bad apple
+categories:
+- 折腾
 ---
 
 重写了bad-apple的代码，利用了多进程的方式进行视频转换。

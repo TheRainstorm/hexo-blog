@@ -2,6 +2,8 @@
 title: Use dlib in C++
 date: 2020-03-01 01:25:00
 tags:
+- dlib
+categories:
 description: 同样是关于dlib库的安装。但由于dlib可以不用预编译，官网上也没有提供预编译的版本，本文主要是介绍如何在项目中直接使用dlib。在结尾总结了配置3d_face_reconstruction的过程（国创项目中需要用到，虽然并没有安装成功）
 ---
 

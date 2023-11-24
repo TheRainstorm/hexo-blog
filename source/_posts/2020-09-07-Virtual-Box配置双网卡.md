@@ -1,7 +1,11 @@
 ---
 title: Virtual Box配置双网卡
 date: 2020-09-07 19:02:24
-tags: VirtualBox
+tags:
+- virtualbox
+- 网桥
+categories:
+- 折腾
 ---
 
 由于目前在电脑上运行一个虚拟机已经比较流畅，而虚拟机又有着真机无法比拟的优势，如：
